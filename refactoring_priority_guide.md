@@ -7,7 +7,6 @@ target_agents:
     config_path: ".claude/skills/code-unclutter/SKILL.md"
   - name: "codex-cli"
     config_path: ".gemini/skills/code-unclutter/SKILL.md"
-source_reference: "リファクタリング "
 ---
 
 # `code-unclutter`: 高度リファクタリング・スキルスイート仕様書
@@ -29,7 +28,7 @@ code-unclutter/
 │   ├── safety_guard.py               # テスト自動実行・アトミックコミット・自動ロールバック
 │   └── mikado.py                     # ミカド法 (No.98) 依存関係ツリー管理
 ├── references/                       # エージェントがオンデマンド参照する構造化データ
-│   ├── catalog_100.json              # 全100項目の完全定義 (ID, Phase, Risk, Recipe)
+│   ├── catalog.json              # 全100項目の完全定義 (ID, Phase, Risk, Recipe)
 │   └── workflows.md                  # 粒度別 (ファイル/機能/差分/シンボル) 実行プロトコル
 └── templates/                        # 仕様化テスト・ゴールデンマスター生成用雛形
 ```

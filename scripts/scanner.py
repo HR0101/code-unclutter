@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 scripts/scanner.py - Code Smells & Metrics Scanner for code-unclutter
-Detects smells from '100 Refactorings Catalog' across files, modules, or git diffs.
+Detects smells from 'Standard Refactoring Catalog' across files, modules, or git diffs.
 Zero external dependencies (uses standard library only).
 """
 

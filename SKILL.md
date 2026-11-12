@@ -1,9 +1,9 @@
 ---
 name: code-unclutter
-description: Autonomous multi-scope, safe refactoring engine based on the 100 Refactorings Catalog. Automatically detects and cleans code smells across files, modules, git diffs, or individual functions. Features priority gating (P0 Tests -> P1 Quick-Wins -> P2 Logic -> P3 Architecture), built-in AST smell scanning, automated regression testing, and instant rollbacks on test failure. Use when the user asks to refactor, clean up, unclutter, simplify, or improve code quality, readability, or structure.
+description: Autonomous multi-scope, safe refactoring engine based on the Standard Refactoring Catalog. Automatically detects and cleans code smells across files, modules, git diffs, or individual functions. Features priority gating (P0 Tests -> P1 Quick-Wins -> P2 Logic -> P3 Architecture), built-in AST smell scanning, automated regression testing, and instant rollbacks on test failure. Use when the user asks to refactor, clean up, unclutter, simplify, or improve code quality, readability, or structure.
 license: MIT
 metadata:
-  framework: "100 Refactorings Catalog"
+  framework: "Standard Refactoring Catalog"
   supported-languages: ["TypeScript", "JavaScript", "Python", "Go", "Rust", "Java", "PHP", "C#"]
   version: "3.2.0"
 ---
@@ -67,7 +67,7 @@ AIによるリファクタリングが失敗する最大の原因は、**「頼�
 python3 scripts/scanner.py <target_path>
 ```
 *※ 差分指定時は `--diff`、特定シンボル指定時は `--symbol <name>` を付与。*  
-検出結果と照合するルール詳細は [references/catalog_100.json](references/catalog_100.json) を参照。
+検出結果と照合するルール詳細は [references/catalog.json](references/catalog.json) を参照。
 
 ### Step 2: Phase 0 安全確認（Safety Gate）
 1. 既存のテストスイート（pytest, jest, cargo test, go test等）が存在するか確認する。

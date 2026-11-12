@@ -40,7 +40,7 @@ def run_safety_verify(files=None, message=None, test_cmd=None):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="🧹 code-unclutter: Advanced Safe Refactoring Engine (100 Refactorings Catalog)",
+        description="🧹 code-unclutter: Advanced Safe Refactoring Engine (Standard Refactoring Catalog)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

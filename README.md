@@ -1,6 +1,6 @@
 # code-unclutter
 
-多粒度対応 自律型リファクタリング・スキルスイート  
+> 多粒度対応 自律型リファクタリング・スキルスイート  
 > 対応エージェント: Codex CLI / Claude Code / Gemini CLI / Antigravity
 
 ---
@@ -187,7 +187,7 @@ python3 scripts/mikado.py status
 
 | ファイル名 | 内容 |
 | :--- | :--- |
-| [catalog_100.json](references/catalog_100.json) | 全100項目の完全定義辞書 |
+| [catalog.json](references/catalog.json) | 全100項目の完全定義辞書 |
 | [workflows.md](references/workflows.md) | ファイル/機能/差分/シンボル/移行の粒度別実行手順書 |
 | [recipes-quickwins.md](references/recipes-quickwins.md) | Phase 1（まず直す）の言語別Before/After実例集 |
 | [recipes-purify.md](references/recipes-purify.md) | Phase 2（ロジック純化）のBefore/After実例集 |
