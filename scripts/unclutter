@@ -1,0 +1,100 @@
+#!/usr/bin/env python3
+"""
+scripts/unclutter - Main CLI Orchestrator for code-unclutter
+Dispatches diagnostics, safety guards, workflows, and refactoring scripts.
+"""
+
+import argparse
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+SCRIPTS_DIR = Path(__file__).parent
+
+
+def run_scanner(path=None, diff=False, symbol=None, json_out=False):
+    cmd = [sys.executable, str(SCRIPTS_DIR / "scanner.py")]
+    if diff:
+        cmd.append("--diff")
+    elif path:
+        cmd.append(path)
+    if symbol:
+        cmd.extend(["--symbol", symbol])
+    if json_out:
+        cmd.append("--json")
+    subprocess.run(cmd)
+
+
+def run_safety_verify(files=None, message=None, test_cmd=None):
+    cmd = [sys.executable, str(SCRIPTS_DIR / "safety_guard.py"), "verify"]
+    if test_cmd:
+        cmd.extend(["--test-cmd", test_cmd])
+    if message:
+        cmd.extend(["--message", message])
+    if files:
+        cmd.append("--files")
+        cmd.extend(files)
+    subprocess.run(cmd)
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="🧹 code-unclutter: Advanced Safe Refactoring Engine (100 Refactorings Catalog)",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  unclutter --file src/auth.ts --mode scan
+  unclutter --file src/auth.ts --mode quick-win
+  unclutter --feature src/billing/ --mode purify
+  unclutter --diff --mode quick-win
+  unclutter --symbol calculateTax --file src/tax.py
+        """
+    )
+
+    # Scope arguments (mutually exclusive where appropriate)
+    scope_group = parser.add_argument_group("Target Scope")
+    scope_group.add_argument("--file", "-f", help="Target a specific single file")
+    scope_group.add_argument("--feature", "-d", help="Target an entire feature module directory")
+    scope_group.add_argument("--diff", action="store_true", help="Target only git-staged / modified files (Boy Scout Rule)")
+    scope_group.add_argument("--symbol", "-s", help="Target a specific function or class name within a file")
+
+    # Mode arguments
+    mode_group = parser.add_argument_group("Execution Mode")
+    mode_group.add_argument(
+        "--mode", "-m",
+        choices=["scan", "quick-win", "purify", "harden", "architect", "full"],
+        default="scan",
+        help="Refactoring mode (default: scan)"
+    )
+
+    # Safety flags
+    safety_group = parser.add_argument_group("Safety Options")
+    safety_group.add_argument("--test-cmd", help="Custom test command for verification")
+    safety_group.add_argument("--dry-run", action="store_true", help="Simulate without applying edits")
+    safety_group.add_argument("--json", action="store_true", help="Output diagnostic results in JSON")
+
+    args = parser.parse_args()
+
+    target = args.file or args.feature or "."
+
+    print(f"🧹 code-unclutter starting: mode=[{args.mode}], scope=[{target}], diff=[{args.diff}]")
+
+    if args.mode == "scan":
+        run_scanner(path=target, diff=args.diff, symbol=args.symbol, json_out=args.json)
+    elif args.mode == "quick-win":
+        print("🔍 Scanning for Phase 1 Quick-Wins (Dead code, Magic numbers, Guard clauses, Empty catches)...")
+        run_scanner(path=target, diff=args.diff, symbol=args.symbol)
+        print("\n💡 AI agents should now apply Phase 1 transformations following the generated diagnostics above.")
+    elif args.mode == "harden":
+        print(f"🛡️ Hardening mode: Ensure characterization tests (Golden Master) exist for {target}.")
+    elif args.mode == "purify":
+        print(f"🧪 Purify mode: Extracting long functions, separating queries from modifiers in {target}.")
+    elif args.mode == "architect":
+        print(f"🏛️ Architecture mode: Use scripts/mikado.py to track dependency tree.")
+    else:
+        run_scanner(path=target, diff=args.diff, symbol=args.symbol)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,902 @@
+[
+  {
+    "no": 1,
+    "name_ja": "長すぎる関数",
+    "name_en": "Long Function",
+    "category": "smell",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "26 関数の抽出, 37 フェーズの分離"
+  },
+  {
+    "no": 2,
+    "name_ja": "重複したコード",
+    "name_en": "Duplicated Code",
+    "category": "smell",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "80 DRY原則, 26 関数の抽出"
+  },
+  {
+    "no": 3,
+    "name_ja": "不思議な名前",
+    "name_en": "Mysterious Name",
+    "category": "smell",
+    "priority_phase": "P1",
+    "risk": "minimal",
+    "action_guide": "27 変数名の変更, 28 関数宣言の変更"
+  },
+  {
+    "no": 4,
+    "name_ja": "深いネスト",
+    "name_en": "Deep Nesting",
+    "category": "smell",
+    "priority_phase": "P1",
+    "risk": "low",
+    "action_guide": "51 ガード節, 52 条件記述の分解"
+  },
+  {
+    "no": 5,
+    "name_ja": "マジックナンバー",
+    "name_en": "Magic Number",
+    "category": "smell",
+    "priority_phase": "P1",
+    "risk": "minimal",
+    "action_guide": "名前付き定数化, 67 列挙型"
+  },
+  {
+    "no": 6,
+    "name_ja": "巨大なクラス",
+    "name_en": "Large Class",
+    "category": "smell",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "30 クラスの抽出, 79 単一責任の原則"
+  },
+  {
+    "no": 7,
+    "name_ja": "長すぎるパラメータリスト",
+    "name_en": "Long Parameter List",
+    "category": "smell",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "33 パラメータオブジェクト"
+  },
+  {
+    "no": 8,
+    "name_ja": "デッドコード",
+    "name_en": "Dead Code",
+    "category": "smell",
+    "priority_phase": "P1",
+    "risk": "minimal",
+    "action_guide": "未使用コード・参照ゼロシンボルの削除"
+  },
+  {
+    "no": 9,
+    "name_ja": "変更の分散",
+    "name_en": "Shotgun Surgery",
+    "category": "smell",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "36 関数の移動, 38 関数群のクラス集約"
+  },
+  {
+    "no": 10,
+    "name_ja": "変更の偏り",
+    "name_en": "Divergent Change",
+    "category": "smell",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "79 単一責任の原則, 83 関心の分離"
+  },
+  {
+    "no": 11,
+    "name_ja": "スパゲッティコード",
+    "name_en": "Spaghetti Code",
+    "category": "smell",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "37 フェーズの分離, 41 ステートメントスライド"
+  },
+  {
+    "no": 12,
+    "name_ja": "グローバル変数",
+    "name_en": "Global Variable",
+    "category": "smell",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "47 変数のカプセル化, 93 依存性の注入"
+  },
+  {
+    "no": 13,
+    "name_ja": "特性の横恋慕",
+    "name_en": "Feature Envy",
+    "category": "smell",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "36 関数の移動"
+  },
+  {
+    "no": 14,
+    "name_ja": "データの群れ",
+    "name_en": "Data Clumps",
+    "category": "smell",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "33 パラメータオブジェクト (※画像誤植あり)"
+  },
+  {
+    "no": 15,
+    "name_ja": "基本データ型への執着",
+    "name_en": "Primitive Obsession",
+    "category": "smell",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "値オブジェクト (Value Object) 化"
+  },
+  {
+    "no": 16,
+    "name_ja": "Switch文",
+    "name_en": "Repeated Switch",
+    "category": "smell",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "54 ポリモーフィズム, 68 ステートパターン"
+  },
+  {
+    "no": 17,
+    "name_ja": "一時的属性",
+    "name_en": "Temporary Field",
+    "category": "smell",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "30 クラスの抽出, 56 特殊ケースの導入"
+  },
+  {
+    "no": 18,
+    "name_ja": "メッセージの連鎖",
+    "name_en": "Message Chains",
+    "category": "smell",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "92 デメテルの法則, 43 委譲の隠蔽"
+  },
+  {
+    "no": 19,
+    "name_ja": "仲介人",
+    "name_en": "Middle Man",
+    "category": "smell",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "44 仲介人の除去"
+  },
+  {
+    "no": 20,
+    "name_ja": "疑わしき一般化",
+    "name_en": "Speculative Generality",
+    "category": "smell",
+    "priority_phase": "P1",
+    "risk": "low",
+    "action_guide": "82 YAGNI原則に基づく未使用拡張コード削除"
+  },
+  {
+    "no": 21,
+    "name_ja": "怠け者クラス",
+    "name_en": "Lazy Element",
+    "category": "smell",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "45 クラスのインライン化"
+  },
+  {
+    "no": 22,
+    "name_ja": "データクラス",
+    "name_en": "Data Class",
+    "category": "smell",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "36 関数の移動, 38 関数群のクラス集約"
+  },
+  {
+    "no": 23,
+    "name_ja": "パラレル継承",
+    "name_en": "Parallel Inheritance Hierarchies",
+    "category": "smell",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "委譲への置き換え"
+  },
+  {
+    "no": 24,
+    "name_ja": "相続拒否",
+    "name_en": "Refused Bequest",
+    "category": "smell",
+    "priority_phase": "P3",
+    "risk": "medium",
+    "action_guide": "継承から委譲 (Composition) への変更"
+  },
+  {
+    "no": 25,
+    "name_ja": "不適切な関係",
+    "name_en": "Inappropriate Intimacy",
+    "category": "smell",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "カプセル化強化, 92 デメテルの法則"
+  },
+  {
+    "no": 26,
+    "name_ja": "関数の抽出",
+    "name_en": "Extract Function",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "1関数1責任に切り出し"
+  },
+  {
+    "no": 27,
+    "name_ja": "変数名の変更",
+    "name_en": "Rename Variable",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "minimal",
+    "action_guide": "ドメイン言語に即した明確な名前に改名"
+  },
+  {
+    "no": 28,
+    "name_ja": "関数宣言の変更",
+    "name_en": "Change Function Declaration",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "関数名・引数シグネチャの見直し"
+  },
+  {
+    "no": 29,
+    "name_ja": "変数の抽出",
+    "name_en": "Extract Variable",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "minimal",
+    "action_guide": "複雑な計算式・条件式を説明的変数に代入"
+  },
+  {
+    "no": 30,
+    "name_ja": "クラスの抽出",
+    "name_en": "Extract Class",
+    "category": "refactoring",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "複数責務を持つクラスを分割"
+  },
+  {
+    "no": 31,
+    "name_ja": "関数のインライン化",
+    "name_en": "Inline Function",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "中身が名前と同じ無意味な1行関数を戻す"
+  },
+  {
+    "no": 32,
+    "name_ja": "変数の分離",
+    "name_en": "Split Variable",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "minimal",
+    "action_guide": "1つの変数の使い回しを防ぎ再代入禁止"
+  },
+  {
+    "no": 33,
+    "name_ja": "パラメータオブジェクト",
+    "name_en": "Introduce Parameter Object",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "引数の組をDTO/インターフェースに集約"
+  },
+  {
+    "no": 34,
+    "name_ja": "フラグパラメータの削除",
+    "name_en": "Remove Flag Argument",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "真偽値引数をやめ関数を2つに分割"
+  },
+  {
+    "no": 35,
+    "name_ja": "問い合わせと更新の分離",
+    "name_en": "Separate Query from Modifier",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "CQS原則。副作用と戻り値を分離"
+  },
+  {
+    "no": 36,
+    "name_ja": "関数の移動",
+    "name_en": "Move Function",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "最もデータを多く使う場所へ関数を移設"
+  },
+  {
+    "no": 37,
+    "name_ja": "フェーズの分離",
+    "name_en": "Split Phase",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "データ取得・計算・描画のステップ分割"
+  },
+  {
+    "no": 38,
+    "name_ja": "関数群のクラスへの集約",
+    "name_en": "Combine Functions into Class",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "同一データを操作するユーティリティ群をクラス化"
+  },
+  {
+    "no": 39,
+    "name_ja": "変数のインライン化",
+    "name_en": "Inline Variable",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "minimal",
+    "action_guide": "自明で冗長な中間変数を消去"
+  },
+  {
+    "no": 40,
+    "name_ja": "アルゴリズムの置き換え",
+    "name_en": "Substitute Algorithm",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "複雑なロジックを言語標準API等で単純化"
+  },
+  {
+    "no": 41,
+    "name_ja": "ステートメントのスライド",
+    "name_en": "Slide Statements",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "minimal",
+    "action_guide": "関連する行を宣言箇所の近くに寄せる"
+  },
+  {
+    "no": 42,
+    "name_ja": "関数のパラメータ化",
+    "name_en": "Parameterize Function",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "定数だけ違う類似関数を引数で1本化"
+  },
+  {
+    "no": 43,
+    "name_ja": "委譲の隠蔽",
+    "name_en": "Hide Delegate",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "呼び出し側が奥の部品を直接触らないカプセル化"
+  },
+  {
+    "no": 44,
+    "name_ja": "仲介人の除去",
+    "name_en": "Remove Middle Man",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "横流しするだけの中継メソッドを直接参照化"
+  },
+  {
+    "no": 45,
+    "name_ja": "クラスのインライン化",
+    "name_en": "Inline Class",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "ほぼ空になった不要クラスを畳む"
+  },
+  {
+    "no": 46,
+    "name_ja": "ファクトリ関数",
+    "name_en": "Replace Constructor with Factory Function",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "インスタンス生成ロジックの一元化"
+  },
+  {
+    "no": 47,
+    "name_ja": "変数のカプセル化",
+    "name_en": "Encapsulate Variable",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "共有変数をgetter/setterやprivate化"
+  },
+  {
+    "no": 48,
+    "name_ja": "メソッドの引き上げ",
+    "name_en": "Pull Up Method",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "子クラスの重複メソッドを親クラスへ昇格"
+  },
+  {
+    "no": 49,
+    "name_ja": "スーパークラスの抽出",
+    "name_en": "Extract Superclass",
+    "category": "refactoring",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "類似クラス群の共通ロジックを基底クラス化"
+  },
+  {
+    "no": 50,
+    "name_ja": "クラス階層の平坦化",
+    "name_en": "Collapse Hierarchy",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "差分のない不要な継承階層を統合"
+  },
+  {
+    "no": 51,
+    "name_ja": "ガード節",
+    "name_en": "Replace Nested Conditional with Guard Clauses",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "low",
+    "action_guide": "異常系を早期returnしネスト平坦化"
+  },
+  {
+    "no": 52,
+    "name_ja": "条件記述の分解",
+    "name_en": "Decompose Conditional",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "minimal",
+    "action_guide": "長い条件式を意味のある関数に切り出し"
+  },
+  {
+    "no": 53,
+    "name_ja": "条件記述の統合",
+    "name_en": "Consolidate Conditional Expression",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "minimal",
+    "action_guide": "同一結果になる複数ifを論理和で1本化"
+  },
+  {
+    "no": 54,
+    "name_ja": "ポリモーフィズム",
+    "name_en": "Replace Conditional with Polymorphism",
+    "category": "refactoring",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "種別switchを多態性クラスに置換"
+  },
+  {
+    "no": 55,
+    "name_ja": "ループの分離",
+    "name_en": "Split Loop",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "複数処理を行う1つのループを独立ループに分離"
+  },
+  {
+    "no": 56,
+    "name_ja": "特殊ケースの導入",
+    "name_en": "Introduce Special Case",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "Null Objectパターンでnullチェック撲滅"
+  },
+  {
+    "no": 57,
+    "name_ja": "アサーションの導入",
+    "name_en": "Introduce Assertion",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "前提条件をコードで明示"
+  },
+  {
+    "no": 58,
+    "name_ja": "制御フラグの削除",
+    "name_en": "Remove Control Flag",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "low",
+    "action_guide": "ループ脱出用boolean変数をbreak/return化"
+  },
+  {
+    "no": 59,
+    "name_ja": "コレクションパイプライン",
+    "name_en": "Replace Loop with Pipeline",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "forループをmap/filter等のパイプライン化"
+  },
+  {
+    "no": 60,
+    "name_ja": "ルックアップテーブル",
+    "name_en": "Replace Conditional with Lookup Table",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "長いif連鎖をMap/辞書参照に置換"
+  },
+  {
+    "no": 61,
+    "name_ja": "ストラテジーパターン",
+    "name_en": "Strategy Pattern",
+    "category": "refactoring",
+    "priority_phase": "P3",
+    "risk": "medium",
+    "action_guide": "アルゴリズムをインターフェースで差し替え可能に"
+  },
+  {
+    "no": 62,
+    "name_ja": "フェイルファスト",
+    "name_en": "Fail Fast",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "low",
+    "action_guide": "関数の入口で不正入力を即座にエラー停止"
+  },
+  {
+    "no": 63,
+    "name_ja": "三項演算子",
+    "name_en": "Ternary Operator",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "minimal",
+    "action_guide": "単純な代入に限定（※ネスト禁止）"
+  },
+  {
+    "no": 64,
+    "name_ja": "ド・モルガンの法則",
+    "name_en": "De Morgan's Laws",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "low",
+    "action_guide": "否定の重なりを整理して直感的な条件式に"
+  },
+  {
+    "no": 65,
+    "name_ja": "オプショナルチェーン",
+    "name_en": "Optional Chaining",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "minimal",
+    "action_guide": "a?.b?.c でnull判定ネストを一掃"
+  },
+  {
+    "no": 66,
+    "name_ja": "Null合体演算子",
+    "name_en": "Nullish Coalescing Operator",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "minimal",
+    "action_guide": "a ?? b でデフォルト値を安全に設定"
+  },
+  {
+    "no": 67,
+    "name_ja": "列挙型",
+    "name_en": "Enum / Union Types",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "low",
+    "action_guide": "状態文字列を型安全なenum/リテラル型化"
+  },
+  {
+    "no": 68,
+    "name_ja": "ステートパターン",
+    "name_en": "State Pattern",
+    "category": "refactoring",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "状態遷移ロジックをオブジェクトとして分離"
+  },
+  {
+    "no": 69,
+    "name_ja": "パターンマッチ",
+    "name_en": "Pattern Matching",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "言語の最新match/switch式で分岐可読化"
+  },
+  {
+    "no": 70,
+    "name_ja": "短絡評価",
+    "name_en": "Short-Circuit Evaluation",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "minimal",
+    "action_guide": "軽い条件を先に評価し重い処理を回避"
+  },
+  {
+    "no": 71,
+    "name_ja": "例外の握りつぶし",
+    "name_en": "Fix Empty Catch",
+    "category": "refactoring",
+    "priority_phase": "P1",
+    "risk": "low",
+    "action_guide": "空のcatch/exceptを撲滅しログや再スロー化"
+  },
+  {
+    "no": 72,
+    "name_ja": "ループ不変コードの移動",
+    "name_en": "Code Motion (Loop Invariant)",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "minimal",
+    "action_guide": "ループ内で不変な計算式を外に出す"
+  },
+  {
+    "no": 73,
+    "name_ja": "ステートマシン",
+    "name_en": "Finite State Machine",
+    "category": "refactoring",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "フラグ組み合わせをステートマシンで厳格化"
+  },
+  {
+    "no": 74,
+    "name_ja": "デシジョンテーブル",
+    "name_en": "Decision Table",
+    "category": "refactoring",
+    "priority_phase": "P2",
+    "risk": "minimal",
+    "action_guide": "複雑な条件の組み合わせを表で整理"
+  },
+  {
+    "no": 75,
+    "name_ja": "ヨーダ記法",
+    "name_en": "Yoda Conditions",
+    "category": "refactoring",
+    "priority_phase": "OVERRIDE",
+    "risk": "low",
+    "action_guide": "※現代では非推奨。x == 0 の自然順序を強制"
+  },
+  {
+    "no": 76,
+    "name_ja": "仕様化テスト",
+    "name_en": "Characterization Test",
+    "category": "principle",
+    "priority_phase": "P0",
+    "risk": "zero",
+    "action_guide": "変更前に現行動作を固定するブラックボックステスト"
+  },
+  {
+    "no": 77,
+    "name_ja": "小さなステップ",
+    "name_en": "Small Steps",
+    "category": "principle",
+    "priority_phase": "P0",
+    "risk": "zero",
+    "action_guide": "1変更1テスト実行の細かな歩幅で進行"
+  },
+  {
+    "no": 78,
+    "name_ja": "回帰テスト",
+    "name_en": "Regression Testing",
+    "category": "principle",
+    "priority_phase": "P0",
+    "risk": "zero",
+    "action_guide": "変更の都度全テストを実行しデグレ防止"
+  },
+  {
+    "no": 79,
+    "name_ja": "単一責任の原則",
+    "name_en": "Single Responsibility Principle",
+    "category": "principle",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "クラス・モジュールの変更理由を1つに限定"
+  },
+  {
+    "no": 80,
+    "name_ja": "DRY原則",
+    "name_en": "Don't Repeat Yourself",
+    "category": "principle",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "同じ知識を1箇所に集約（※過度な早期共通化注意）"
+  },
+  {
+    "no": 81,
+    "name_ja": "KISS原則",
+    "name_en": "Keep It Simple, Stupid",
+    "category": "principle",
+    "priority_phase": "P0",
+    "risk": "zero",
+    "action_guide": "余計な抽象化を避け最も単純な実装を選択"
+  },
+  {
+    "no": 82,
+    "name_ja": "YAGNI",
+    "name_en": "You Aren't Gonna Need It",
+    "category": "principle",
+    "priority_phase": "P1",
+    "risk": "zero",
+    "action_guide": "将来予測で作られた不要な拡張仕組みを削除"
+  },
+  {
+    "no": 83,
+    "name_ja": "関心の分離",
+    "name_en": "Separation of Concerns",
+    "category": "principle",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "UI・ロジック・データを疎結合に分離"
+  },
+  {
+    "no": 84,
+    "name_ja": "ボーイスカウト・ルール",
+    "name_en": "Boy Scout Rule",
+    "category": "principle",
+    "priority_phase": "P1",
+    "risk": "zero",
+    "action_guide": "触ったコードを触る前より少しだけ綺麗にして立ち去る"
+  },
+  {
+    "no": 85,
+    "name_ja": "単体テスト",
+    "name_en": "Unit Testing",
+    "category": "principle",
+    "priority_phase": "P0",
+    "risk": "zero",
+    "action_guide": "分割した関数ごとに単体テストを整備"
+  },
+  {
+    "no": 86,
+    "name_ja": "リンター",
+    "name_en": "Linter",
+    "category": "principle",
+    "priority_phase": "P0",
+    "risk": "zero",
+    "action_guide": "静的解析による構文・スタイルの自動検査"
+  },
+  {
+    "no": 87,
+    "name_ja": "フォーマッター",
+    "name_en": "Formatter",
+    "category": "principle",
+    "priority_phase": "P0",
+    "risk": "zero",
+    "action_guide": "コード書式の自動一括フォーマット"
+  },
+  {
+    "no": 88,
+    "name_ja": "循環的複雑度",
+    "name_en": "Cyclomatic Complexity",
+    "category": "metric",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "分岐数を測定し10を超える関数を分割"
+  },
+  {
+    "no": 89,
+    "name_ja": "認知的複雑度",
+    "name_en": "Cognitive Complexity",
+    "category": "metric",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "人間の理解負荷スコアを測定し高い関数から改善"
+  },
+  {
+    "no": 90,
+    "name_ja": "コードカバレッジ",
+    "name_en": "Code Coverage",
+    "category": "metric",
+    "priority_phase": "P0",
+    "risk": "zero",
+    "action_guide": "テスト網羅率を測定し未テスト領域を可視化"
+  },
+  {
+    "no": 91,
+    "name_ja": "型注釈",
+    "name_en": "Type Annotations",
+    "category": "principle",
+    "priority_phase": "P0",
+    "risk": "zero",
+    "action_guide": "引数と戻り値に静的型を付与し安全性確保"
+  },
+  {
+    "no": 92,
+    "name_ja": "デメテルの法則",
+    "name_en": "Law of Demeter",
+    "category": "principle",
+    "priority_phase": "P2",
+    "risk": "medium",
+    "action_guide": "直接の相手だけを呼ぶ（最小知識の原則）"
+  },
+  {
+    "no": 93,
+    "name_ja": "依存性の注入",
+    "name_en": "Dependency Injection",
+    "category": "principle",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "外部依存を引数で渡しテスト容易性を向上"
+  },
+  {
+    "no": 94,
+    "name_ja": "純粋関数",
+    "name_en": "Pure Function",
+    "category": "principle",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "副作用を持たず入力のみで出力が決まる関数化"
+  },
+  {
+    "no": 95,
+    "name_ja": "イミュータブル",
+    "name_en": "Immutable Data",
+    "category": "principle",
+    "priority_phase": "P2",
+    "risk": "low",
+    "action_guide": "データの直接書き換えを防ぎ新規オブジェクト生成"
+  },
+  {
+    "no": 96,
+    "name_ja": "ストラングラーフィグ",
+    "name_en": "Strangler Fig Pattern",
+    "category": "pattern",
+    "priority_phase": "P3",
+    "risk": "medium",
+    "action_guide": "大規模システムを新旧並行で漸進的に切り替え"
+  },
+  {
+    "no": 97,
+    "name_ja": "命名規則",
+    "name_en": "Naming Conventions",
+    "category": "principle",
+    "priority_phase": "P1",
+    "risk": "minimal",
+    "action_guide": "プロジェクト内で一貫した命名規約の遵守"
+  },
+  {
+    "no": 98,
+    "name_ja": "ミカド法",
+    "name_en": "Mikado Method",
+    "category": "procedure",
+    "priority_phase": "P3",
+    "risk": "zero",
+    "action_guide": "大規模変更の依存関係ツリーを図式化して順次実行"
+  },
+  {
+    "no": 99,
+    "name_ja": "ゴールデンマスター",
+    "name_en": "Golden Master",
+    "category": "procedure",
+    "priority_phase": "P0",
+    "risk": "zero",
+    "action_guide": "リファクタリング前後の出力を丸ごと比較"
+  },
+  {
+    "no": 100,
+    "name_ja": "開放閉鎖原則",
+    "name_en": "Open/Closed Principle",
+    "category": "principle",
+    "priority_phase": "P3",
+    "risk": "high",
+    "action_guide": "既存を変更せず拡張可能な設計（OCP）"
+  }
+]
