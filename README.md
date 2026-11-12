@@ -1,6 +1,6 @@
 # code-unclutter
 
-多粒度対応 自律型リファクタリング・スキルスイート  
+> 多粒度対応 自律型リファクタリング・スキルスイート  
 > 対応エージェント: Codex CLI / Claude Code / Gemini CLI / Antigravity
 
 ---
